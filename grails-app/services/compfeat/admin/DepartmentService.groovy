@@ -8,6 +8,18 @@ class DepartmentService {
 
     }
 
+    Department findDepartmentById(String id){
+
+        if(null == id){
+            throw new Exception('Invalid Parameters')
+        }
+
+        def department = Department.get(id)
+        return department
+
+    }
+
+
     List<Department> getAllDepartments(){
 
         def departments = Department.findAllByStatus(STATUS_ACTIVE)
