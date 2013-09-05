@@ -1,6 +1,6 @@
 package compfeat.admin
 
-class Property {
+class Feature {
 
     static mapWith = "mongo"
 

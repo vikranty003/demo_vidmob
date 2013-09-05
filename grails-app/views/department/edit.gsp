@@ -22,7 +22,7 @@
         <g:hiddenField name="version" value="${department?.version}"/>
         <div class="form-group">
             <div class="col-lg-offset-2 col-lg-10">
-                <button type="submit" class="btn btn-default">Add Department</button>
+                <button type="submit" class="btn btn-default">Update Department</button>
             </div>
         </div>
     </g:form>

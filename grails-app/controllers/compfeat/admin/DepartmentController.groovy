@@ -20,6 +20,14 @@ class DepartmentController {
     def save(){
         def department = new Department(params);
 
+        if (department.validate()) {
+            // do something with user
+        }
+        else {
+            department.errors.allErrors.each {
+                println it
+            }
+        }
         if(!department.save(flush: true)){
             render(view: "add")
             return

@@ -13,6 +13,11 @@
     <meta name="layout" content="admin">
 </head>
 <body>
-                    Welcome
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>compfeat admin</p>
+    </div>
+</div>
 </body>
 </html>

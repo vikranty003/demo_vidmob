@@ -14,12 +14,12 @@
 </head>
 <body>
 <g:render template="dropdown"/>
-<div class="row">
+<div class="container">
     <ul class="list-inline">
         <g:each in="${departments}" var="department">
             <li class="thumbnail">
-                <g:link controller="department" action="list" id="${department.id}">
-                    <h4>${department.name}</h4>
+                <g:link controller="department" action="show" id="${department.id}">
+                    <h4>${department.key} : ${department.name}</h4>
                 </g:link>
             </li>
         </g:each>

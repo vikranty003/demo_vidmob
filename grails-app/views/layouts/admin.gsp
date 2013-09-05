@@ -15,24 +15,34 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Compfeat</a>
+                <g:link controller="welcome" action="index" class="navbar-brand"><strong>Compfeat</strong></g:link>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <g:if test="${params.controller == 'department'}">
-                        <li class="active"><g:link controller="department" action="index">Departments</g:link></li>
-                    </g:if>
-                    <g:else>
-                        <li><g:link controller="department" action="index">Departments</g:link></li>
-                    </g:else>
                     <g:if test="${params.controller == 'product'}">
                         <li class="active"><g:link controller="product" action="index">Products</g:link></li>
                     </g:if>
                     <g:else>
                         <li><g:link controller="product" action="index">Products</g:link></li>
                     </g:else>
-                    <li><a href="#contact">Contact</a></li>
+                    <g:if test="${params.controller == 'department'}">
+                        <li class="active"><g:link controller="department" action="index">Departments</g:link></li>
+                    </g:if>
+                    <g:else>
+                        <li><g:link controller="department" action="index">Departments</g:link></li>
+                    </g:else>
+                    <g:if test="${params.controller == 'meta'}">
+                        <li class="active"><g:link controller="meta" action="index">Meta</g:link></li>
+                    </g:if>
+                    <g:else>
+                        <li><g:link controller="meta" action="index">Meta</g:link></li>
+                    </g:else>
+                    <g:if test="${params.controller == 'feature'}">
+                        <li class="active"><g:link controller="feature" action="index">Feature</g:link></li>
+                    </g:if>
+                    <g:else>
+                        <li><g:link controller="feature" action="index">Feature</g:link></li>
+                    </g:else>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>

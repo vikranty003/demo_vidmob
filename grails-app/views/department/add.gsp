@@ -16,7 +16,7 @@
     <g:render template="dropdown"/>
     <div class="thumbnail">
         <p class="lead">Add Department</p>
-        <g:form controller="department" action="add" role="form" class="form-horizontal">
+        <g:form controller="department" action="save" role="form" class="form-horizontal">
             <g:render template="form"/>
             <div class="form-group">
               <div class="col-lg-offset-2 col-lg-10">

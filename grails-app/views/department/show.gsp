@@ -14,21 +14,37 @@
 </head>
 <body>
     <g:render template="dropdown"/>
-    <div class="row">
-        <p class="lead">${department.name}</p>
-    </div>
-    <div class="row">
-        <div class="col-lg-2">Key</div>
-        <div class="col-lg-10">${department.key}</div>
-    </div>
-    <div class="row">
-        <div class="col-lg-2">Name</div>
-        <div class="col-lg-10">${department.name}</div>
-    </div>
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-2">
-            <g:link controller="department" action="edit" class="btn btn-default">Edit</g:link>
-        </div>
+    <div class="container">
+        <table class="table table-bordered">
+            <tbody>
+                <th colspan="2">${department.name}</th>
+                <tr>
+                    <td class="text-right"><strong>#</strong></td>
+                    <td>${department.id}</td>
+
+                </tr>
+                <tr>
+                    <td class="text-right"><strong>Key</strong></td>
+                    <td>${department.key}</td>
+
+                </tr>
+                <tr>
+                    <td class="text-right"><strong>Name</strong></td>
+                    <td>${department.name}</td>
+
+                </tr>
+                <tr>
+                    <td class="text-right"><strong>Status</strong></td>
+                    <td>${department.status}</td>
+
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><g:link controller="department" action="edit" id="${department.id}" class="btn btn-default">Edit</g:link></td>
+                </tr>
+            </tbody>
+        </table>
 
     </div>
 

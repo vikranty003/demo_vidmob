@@ -1,7 +1,5 @@
 package compfeat.admin
 
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion
-
 class Department {
 
     static mapWith = "mongo"
@@ -10,14 +8,20 @@ class Department {
     String id
     String key
     String name
-    Meta meta
-    Property property
+    List<Meta> metaList
+    List<Feature> featuresList
     String status
 
-    static embedded = ['meta', 'property']
+    static embedded = ['metaList', 'featuresList']
 
 
     static constraints = {
 
+        status nullable: true
+
+    }
+
+    def beforeInsert(){
+        status = 'active'
     }
 }
