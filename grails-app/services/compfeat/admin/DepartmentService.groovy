@@ -4,9 +4,6 @@ class DepartmentService {
 
     static STATUS_ACTIVE = 'active'
 
-    def serviceMethod() {
-
-    }
 
     Department findDepartmentById(String id){
 

@@ -7,7 +7,13 @@ class Feature {
     String name;
     String type;
     Boolean input;
+    String status;
 
     static constraints = {
+        status nullable: true
+    }
+
+    def beforeInsert(){
+        status = 'active'
     }
 }
