@@ -22,6 +22,6 @@ class Department {
     }
 
     def beforeInsert(){
-        status = 'active'
+        status = ApplicationConstant.STATUS_ACTIVE
     }
 }

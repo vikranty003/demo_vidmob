@@ -14,6 +14,7 @@
 </head>
 <body>
     <g:render template="dropdown"/>
+    <g:render template="/common/flash" />
     <div class="thumbnail">
         <p class="lead">Add Department</p>
         <g:form controller="department" action="save" role="form" class="form-horizontal">

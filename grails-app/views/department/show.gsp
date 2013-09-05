@@ -15,6 +15,7 @@
 <body>
     <g:render template="dropdown"/>
     <div class="container">
+        <g:render template="/common/flash" />
         <table class="table table-bordered">
             <tbody>
                 <th colspan="2">${department.name}</th>

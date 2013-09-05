@@ -21,6 +21,7 @@ class DepartmentController {
         def department = new Department(params);
 
         if(!department.save(flush: true)){
+            flash.message = "Error Unable to Save Department"
             render(view: "add")
             return
         }
@@ -59,7 +60,31 @@ class DepartmentController {
 
     }
 
-    def update(String id){
+    def update(String id, Long version){
+
+        def department = departmentService.findDepartmentById(id);
+
+        if(!department){
+            flash.message = "Department ${id} not found"
+            redirect(action: "index")
+            return
+        }
+        if (version != null) {
+            if (department.version > version) {
+                flash.message = "Another user has updated this Department while you were editing"
+                redirect(action: "show" , id: department.id)
+                return
+
+            }
+        }
+
+        department.properties = params
+        if(!department.save(flush: true)){
+            flash.message = "Error: Unable to Save Department"
+            render(view: "edit", [department: department])
+            return
+
+        }
 
 
 

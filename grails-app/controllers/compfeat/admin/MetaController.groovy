@@ -13,6 +13,8 @@ class MetaController {
 
     def add(){
 
+        [typeDD: ApplicationConstant.META_TYPE]
+
     }
 
     def save(){
@@ -44,7 +46,31 @@ class MetaController {
 
     }
 
-    def update(){
+    def update(String id, Long version){
+
+        def meta = metaService.findMetaById(id)
+
+        if(!meta){
+            flash.message = "Meta ${id} not found"
+            redirect(action: "index")
+        }
+
+        if(version != null){
+            if(meta.version > version){
+                flash.message = "Another user has updated this Meta while you were editing"
+                redirect(action: "show" , id: meta.id)
+                return
+
+            }
+        }
+
+        meta.properties = params
+        if(!meta.save(flush: true)){
+            flash.message = "Error: Unable to Save Meta"
+            render(view: "edit", [meta: meta])
+            return
+
+        }
 
     }
 

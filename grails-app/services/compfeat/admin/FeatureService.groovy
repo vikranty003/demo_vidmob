@@ -2,7 +2,6 @@ package compfeat.admin
 
 class FeatureService {
 
-    static STATUS_ACTIVE = 'active'
 
     List<Feature> getAllFeatures(){
 
@@ -11,7 +10,7 @@ class FeatureService {
     }
 
     List<Feature> getFeatures(){
-        return Feature.findAllByStatus(STATUS_ACTIVE)
+        return Feature.findAllByStatus(ApplicationConstant.STATUS_ACTIVE)
     }
 
     Feature findFeatureById(String id){

@@ -5,8 +5,6 @@ class Feature {
     static mapWith = "mongo"
 
     String name;
-    String type;
-    Boolean input;
     String status;
 
     static constraints = {
@@ -14,6 +12,6 @@ class Feature {
     }
 
     def beforeInsert(){
-        status = 'active'
+        status = ApplicationConstant.STATUS_ACTIVE
     }
 }

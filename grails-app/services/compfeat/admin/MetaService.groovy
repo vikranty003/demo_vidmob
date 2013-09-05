@@ -2,15 +2,14 @@ package compfeat.admin
 
 class MetaService {
 
-    private STATUS_ACTIVE = 'active'
 
     List<Meta> getAllMetaList(){
 
-        return Meta.list();
+        return Meta.findAll();
     }
 
     List<Meta> getMetaList(){
-        return Meta.findAllByStatus(STATUS_ACTIVE)
+        return Meta.findAllByStatus(ApplicationConstant.STATUS_ACTIVE)
     }
 
     Meta findMetaById(String id){

@@ -8,6 +8,8 @@ class Meta {
     String type;
     List<String> value;
     Boolean input
+    Boolean sort
+    Boolean filter
     String status
 
 
@@ -17,7 +19,7 @@ class Meta {
     }
 
     def beforeInsert(){
-        status = 'active'
+        status = ApplicationConstant.STATUS_ACTIVE
     }
 
 }

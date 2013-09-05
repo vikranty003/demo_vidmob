@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Departments Compfeat Admin</title>
+    <title>Global Meta Compfeat Admin</title>
     <meta name="layout" content="admin">
 </head>
 <body>
@@ -17,10 +17,10 @@
 <div class="container">
     <g:render template="/common/flash" />
     <ul class="list-inline">
-        <g:each in="${departments}" var="department">
+        <g:each in="${metaList}" var="meta">
             <li class="thumbnail">
-                <g:link controller="department" action="show" id="${department.id}">
-                    <h4>${department.key} : ${department.name}</h4>
+                <g:link controller="meta" action="show" id="${meta.id}">
+                    <h4>$${meta.name}</h4>
                 </g:link>
             </li>
         </g:each>
