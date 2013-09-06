@@ -14,58 +14,64 @@
 </head>
 <body>
 <g:render template="header"/>
-<div class="container">
-    <g:render template="/common/flash" />
-    <table class="table table-bordered">
-        <tbody>
-        <th colspan="2">${meta.name}</th>
-        <tr>
-            <td class="text-right"><strong>#</strong></td>
-            <td>${meta.id}</td>
-        </tr>
-        <tr>
-            <td class="text-right"><strong>Name</strong></td>
-            <td>${meta.name}</td>
-        </tr>
-        <tr>
-            <td class="text-right"><strong>Type</strong></td>
-            <td>${meta.type}</td>
-        </tr>
-        <tr>
-            <td class="text-right"><strong>Value</strong></td>
-            <td>${meta.value}</td>
-        </tr>
-        <tr>
-            <td class="text-right"><strong>Input</strong></td>
-            <td>
-                <g:if test="${meta.input}">Yes</g:if>
-                <g:else>No</g:else>
-            </td>
-        </tr>
-        <tr>
-            <td class="text-right"><strong>Sort</strong></td>
-            <td>
-                <g:if test="${meta.sort}">Yes</g:if>
-                <g:else>No</g:else>
-            </td>
-        </tr>
-        <tr>
-            <td class="text-right"><strong>Filter</strong></td>
-            <td>
-                <g:if test="${meta.filter}">Yes</g:if>
-                <g:else>No</g:else>
-            </td>
-        </tr>
-        <tr>
-            <td class="text-right"><strong>Status</strong></td>
-            <td>${meta.status}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><g:link controller="meta" action="edit" id="${meta.id}" class="btn btn-primary">Edit</g:link></td>
-        </tr>
-        </tbody>
-    </table>
+<g:render template="/common/flash" />
+<div class="panel panel-default">
+    <div class="panel-heading">${meta.name}</div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td class="text-right" width="200"><strong>#</strong></td>
+                    <td>${meta.id}</td>
+                </tr>
+                <tr>
+                    <td class="text-right"><strong>Name</strong></td>
+                    <td>${meta.name}</td>
+                </tr>
+                <tr>
+                    <td class="text-right"><strong>Type</strong></td>
+                    <td>${meta.type}</td>
+                </tr>
+                <tr>
+                    <td class="text-right"><strong>Value</strong></td>
+                    <td>${meta.value}</td>
+                </tr>
+                <tr>
+                    <td class="text-right"><strong>Unit</strong></td>
+                    <td>${meta.unit}</td>
+                </tr>
+                <tr>
+                    <td class="text-right"><strong>Input</strong></td>
+                    <td>
+                        <g:if test="${meta.input}">Yes</g:if>
+                        <g:else>No</g:else>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right"><strong>Sort</strong></td>
+                    <td>
+                        <g:if test="${meta.sort}">Yes</g:if>
+                        <g:else>No</g:else>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right"><strong>Filter</strong></td>
+                    <td>
+                        <g:if test="${meta.filter}">Yes</g:if>
+                        <g:else>No</g:else>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right"><strong>Status</strong></td>
+                    <td>${meta.status}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><g:link controller="meta" action="edit" id="${meta.id}" class="btn btn-primary">Edit</g:link></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </div>
 

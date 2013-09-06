@@ -15,16 +15,18 @@
 <body>
 <g:render template="header"/>
 <g:render template="/common/flash" />
-<div class="thumbnail">
-    <p class="lead">Add Feature</p>
-    <g:form controller="feature" action="save" role="form" class="form-horizontal">
-        <g:render template="form"/>
-        <div class="form-group">
-            <div class="col-lg-offset-2 col-lg-10">
-                <button type="submit" class="btn btn-primary">Add Feature</button>
+<div class="panel panel-default">
+    <div class="panel-heading">Add Feature</div>
+    <div class="panel-body">
+        <g:form controller="feature" action="save" role="form" class="form-horizontal">
+            <g:render template="form"/>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-6">
+                    <button type="submit" class="btn btn-primary">Add Feature</button>
+                </div>
             </div>
-        </div>
-    </g:form>
+        </g:form>
+    </div>
 </div>
 </body>
 </html>

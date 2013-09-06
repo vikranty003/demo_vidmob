@@ -1,7 +1,7 @@
 <div class="form-group">
     <label for="name" class="col-md-2 control-label">Name</label>
     <div class="col-md-6">
-        <input type="text" class="form-control" id="name" name="name" value="${meta?.name}" placeholder="Enter Meta Name" required="true" pattern="[a-z0-9]+">
+        <input type="text" class="form-control" id="name" name="name" value="${meta?.name}" placeholder="Enter Meta Name" required="true">
     </div>
 </div>
 <div class="form-group">
@@ -15,6 +15,12 @@
     <label for="value" class="col-md-2 control-label">Value <small>only if type is SELECT</small></label>
     <div class="col-md-6">
         <input type="text" class="form-control" id="value" name="value" value="${meta?.value?.join(",")}" placeholder="Enter Meta Value">
+    </div>
+</div>
+<div class="form-group">
+    <label for="type" class="col-md-2 control-label">Unit</label>
+    <div class="col-md-6">
+        <input type="text" class="form-control" id="unit" name="name" value="${meta?.unit}" placeholder="Enter Unit" required="true">
     </div>
 </div>
 <div class="form-group">

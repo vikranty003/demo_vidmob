@@ -14,33 +14,31 @@
 </head>
 <body>
 <g:render template="header"/>
-<div class="container">
-    <g:render template="/common/flash" />
-    <table class="table table-bordered">
-        <tbody>
-        <th colspan="2">${feature.name}</th>
-        <tr>
-            <td class="text-right" width="200"><strong>#</strong></td>
-            <td>${feature.id}</td>
-
-        </tr>
-        <tr>
-            <td class="text-right"><strong>Name</strong></td>
-            <td>${feature.name}</td>
-
-        </tr>
-        <tr>
-            <td class="text-right"><strong>Status</strong></td>
-            <td>${feature.status}</td>
-
-        </tr>
-
-        <tr>
-            <td></td>
-            <td><g:link controller="feature" action="edit" id="${feature.id}" class="btn btn-primary">Edit</g:link></td>
-        </tr>
-        </tbody>
-    </table>
+<g:render template="/common/flash" />
+<div class="panel panel-default">
+    <div class="panel-heading">${feature.name}</div>
+    <div class="panel-body">
+        <table class="table">
+            <tbody>
+            <tr>
+                <td class="text-right" width="200"><strong>#</strong></td>
+                <td>${feature.id}</td>
+            </tr>
+            <tr>
+                <td class="text-right"><strong>Name</strong></td>
+                <td>${feature.name}</td>
+            </tr>
+            <tr>
+                <td class="text-right"><strong>Status</strong></td>
+                <td>${feature.status}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><g:link controller="feature" action="edit" id="${feature.id}" class="btn btn-primary">Edit</g:link></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
 </div>
 

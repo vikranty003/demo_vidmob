@@ -4,6 +4,7 @@ class Feature {
 
     static mapWith = "mongo"
 
+    String id;
     String name;
     String status;
 

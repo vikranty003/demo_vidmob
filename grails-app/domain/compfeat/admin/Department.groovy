@@ -9,11 +9,13 @@ class Department {
     String key
     String name
     List<Meta> metaList
-    List<Feature> featuresList
+    List<Feature> featureList
     String status
 
-    static embedded = ['metaList', 'featuresList']
 
+
+    static hasMany = [metaList:Meta,featureList:Feature]
+    static embedded = ['metaList', 'featureList']
 
     static constraints = {
 

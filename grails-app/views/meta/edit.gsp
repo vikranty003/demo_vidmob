@@ -15,18 +15,20 @@
 <body>
 <g:render template="header"/>
 <g:render template="/common/flash" />
-<div class="thumbnail">
-    <p class="lead"></p>
-    <g:form controller="meta" action="update" role="form" class="form-horizontal">
-        <g:render template="form"/>
-        <g:hiddenField name="id" value="${meta?.id}"/>
-        <g:hiddenField name="version" value="${meta?.version}"/>
-        <div class="form-group">
-            <div class="col-lg-offset-2 col-lg-10">
-                <button type="submit" class="btn btn-primary">Update Meta</button>
+<div class="panel panel-default">
+    <div class="panel-heading">Edit Global Meta</div>
+    <div class="panel-body">
+        <g:form controller="meta" action="update" role="form" class="form-horizontal">
+            <g:render template="form"/>
+            <g:hiddenField name="id" value="${meta?.id}"/>
+            <g:hiddenField name="version" value="${meta?.version}"/>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-6">
+                    <button type="submit" class="btn btn-primary">Update Meta</button>
+                </div>
             </div>
-        </div>
-    </g:form>
+        </g:form>
+    </div>
 </div>
 </body>
 </html>
