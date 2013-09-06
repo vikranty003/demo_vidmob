@@ -13,14 +13,14 @@
     <meta name="layout" content="admin">
 </head>
 <body>
-<g:render template="dropdown"/>
+<g:render template="header"/>
 <div class="container">
     <g:render template="/common/flash" />
     <table class="table table-bordered">
         <tbody>
         <th colspan="2">${feature.name}</th>
         <tr>
-            <td class="text-right"><strong>#</strong></td>
+            <td class="text-right" width="200"><strong>#</strong></td>
             <td>${feature.id}</td>
 
         </tr>
@@ -37,7 +37,7 @@
 
         <tr>
             <td></td>
-            <td><g:link controller="feature" action="edit" id="${feature.id}" class="btn btn-default">Edit</g:link></td>
+            <td><g:link controller="feature" action="edit" id="${feature.id}" class="btn btn-primary">Edit</g:link></td>
         </tr>
         </tbody>
     </table>

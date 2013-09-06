@@ -13,7 +13,7 @@
     <meta name="layout" content="admin">
 </head>
 <body>
-    <g:render template="dropdown"/>
+    <g:render template="header"/>
     <div class="container">
         <g:render template="/common/flash" />
         <table class="table table-bordered">
@@ -42,7 +42,7 @@
 
                 <tr>
                     <td></td>
-                    <td><g:link controller="department" action="edit" id="${department.id}" class="btn btn-default">Edit</g:link></td>
+                    <td><g:link controller="department" action="edit" id="${department.id}" class="btn btn-primary">Edit</g:link></td>
                 </tr>
             </tbody>
         </table>

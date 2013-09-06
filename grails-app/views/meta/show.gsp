@@ -13,7 +13,7 @@
     <meta name="layout" content="admin">
 </head>
 <body>
-<g:render template="dropdown"/>
+<g:render template="header"/>
 <div class="container">
     <g:render template="/common/flash" />
     <table class="table table-bordered">
@@ -37,18 +37,24 @@
         </tr>
         <tr>
             <td class="text-right"><strong>Input</strong></td>
-            <g:if test="${meta.input}">Yes</g:if>
-            <g:else>No</g:else>
+            <td>
+                <g:if test="${meta.input}">Yes</g:if>
+                <g:else>No</g:else>
+            </td>
         </tr>
         <tr>
             <td class="text-right"><strong>Sort</strong></td>
-            <g:if test="${meta.sort}">Yes</g:if>
-            <g:else>No</g:else>
+            <td>
+                <g:if test="${meta.sort}">Yes</g:if>
+                <g:else>No</g:else>
+            </td>
         </tr>
         <tr>
             <td class="text-right"><strong>Filter</strong></td>
-            <g:if test="${meta.filter}">Yes</g:if>
-            <g:else>No</g:else>
+            <td>
+                <g:if test="${meta.filter}">Yes</g:if>
+                <g:else>No</g:else>
+            </td>
         </tr>
         <tr>
             <td class="text-right"><strong>Status</strong></td>
@@ -56,7 +62,7 @@
         </tr>
         <tr>
             <td></td>
-            <td><g:link controller="meta" action="edit" id="${meta.id}" class="btn btn-default">Edit</g:link></td>
+            <td><g:link controller="meta" action="edit" id="${meta.id}" class="btn btn-primary">Edit</g:link></td>
         </tr>
         </tbody>
     </table>

@@ -87,6 +87,10 @@ class DepartmentController {
         }
 
 
+        flash.message = "Department Successfully updated"
+        redirect(action: "show" , id: department.id)
+        return
+
 
     }
 

@@ -5,7 +5,7 @@ class FeatureService {
 
     List<Feature> getAllFeatures(){
 
-         return Feature.list()
+         return Feature.findAll()
 
     }
 

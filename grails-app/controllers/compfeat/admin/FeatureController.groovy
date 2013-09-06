@@ -6,7 +6,7 @@ class FeatureController {
     def FeatureService featureService
 
     def index(){
-        def features = featureService.allFeatures();
+        def features = featureService.getAllFeatures()
 
         [features: features]
     }
@@ -73,6 +73,10 @@ class FeatureController {
             return
 
         }
+        flash.message = "Feature Updated successfully"
+        redirect(action: "show" , id: feature.id)
+        return
+
 
     }
 

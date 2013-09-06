@@ -13,15 +13,15 @@
     <meta name="layout" content="admin">
 </head>
 <body>
-<g:render template="dropdown"/>
+<g:render template="header"/>
 <g:render template="/common/flash" />
-<div class="thumbnail">
+<div class="container">
     <p class="lead">Add Global Meta</p>
     <g:form controller="meta" action="save" role="form" class="form-horizontal">
         <g:render template="form"/>
         <div class="form-group">
-            <div class="col-lg-offset-2 col-lg-10">
-                <button type="submit" class="btn btn-default">Add Meta</button>
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-primary">Add Meta</button>
             </div>
         </div>
     </g:form>

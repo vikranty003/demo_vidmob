@@ -13,7 +13,7 @@
     <meta name="layout" content="admin">
 </head>
 <body>
-<g:render template="dropdown"/>
+<g:render template="header"/>
 <div class="container">
     <g:render template="/common/flash" />
     <ul class="list-inline">

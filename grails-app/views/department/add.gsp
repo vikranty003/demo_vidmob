@@ -13,7 +13,7 @@
     <meta name="layout" content="admin">
 </head>
 <body>
-    <g:render template="dropdown"/>
+    <g:render template="header"/>
     <g:render template="/common/flash" />
     <div class="thumbnail">
         <p class="lead">Add Department</p>
@@ -21,7 +21,7 @@
             <g:render template="form"/>
             <div class="form-group">
               <div class="col-lg-offset-2 col-lg-10">
-                      <button type="submit" class="btn btn-default">Add Department</button>
+                      <button type="submit" class="btn btn-primary">Add Department</button>
               </div>
             </div>
         </g:form>

@@ -42,7 +42,7 @@ class MetaController {
             throw new Exception("Invalid URLs")
         }
         def meta = metaService.findMetaById(id)
-        [meta: meta]
+        [meta: meta, typeDD: ApplicationConstant.META_TYPE]
 
     }
 
@@ -63,14 +63,19 @@ class MetaController {
 
             }
         }
-
+        params.value = ((String)params.get('value')).tokenize(",")
         meta.properties = params
+
         if(!meta.save(flush: true)){
             flash.message = "Error: Unable to Save Meta"
             render(view: "edit", [meta: meta])
             return
 
         }
+        flash.message = "Meta Info Updated Successfully"
+        redirect(action: "show" , id: meta.id)
+        return
+
 
     }
 

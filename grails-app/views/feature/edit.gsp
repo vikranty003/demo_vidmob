@@ -14,7 +14,7 @@
     <meta name="layout" content="admin">
 </head>
 <body>
-<g:render template="dropdown"/>
+<g:render template="header"/>
 <g:render template="/common/flash" />
 <div class="thumbnail">
     <p class="lead"></p>
@@ -24,7 +24,7 @@
         <g:hiddenField name="version" value="${feature?.version}"/>
         <div class="form-group">
             <div class="col-lg-offset-2 col-lg-10">
-                <button type="submit" class="btn btn-default">Update Feature</button>
+                <button type="submit" class="btn btn-primary">Update Feature</button>
             </div>
         </div>
     </g:form>
