@@ -14,4 +14,12 @@ class ProductService {
 
     }
 
+    List<Product> searchAllProducts(Map search){
+
+        def products = Product.createCriteria(){
+
+        }
+
+    }
+
 }

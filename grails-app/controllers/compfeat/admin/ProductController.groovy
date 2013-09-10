@@ -5,6 +5,7 @@ import compfeat.admin.Product
 class ProductController {
 
     def DepartmentService departmentService
+    def ProductService productService
 
     def index() {
 
@@ -14,9 +15,11 @@ class ProductController {
     }
 
     def list(String departmentId){
-        def departments = departmentService.getDepartments()
-        [departments: departments]
 
-        [products: products]
+        def departments = departmentService.getDepartments()
+
+        def products = productService.findAllProductsByDepartment(departmentId)
+
+        [departments: departments, products: products]
     }
 }

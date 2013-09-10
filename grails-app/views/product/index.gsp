@@ -13,17 +13,13 @@
   <meta name="layout" content="admin">
 </head>
 <body>
-    <div class="page-header">
-        <p class="lead">Products <span class="text-right">Add Product</span></p>
-
-    </div>
-
+    <g:render template="header" />
     <div class="row">
         <ul class="list-inline">
-            <g:each in="${products}" var="product">
+            <g:each in="${departments}" var="department">
                <li class="thumbnail">
-                   <g:link controller="product" action="list" id="${product.key}">
-                       <h4>${product.value}</h4>
+                   <g:link controller="product" action="list" params="${[departmentId: department.id]}">
+                       <h4>${department.name}</h4>
                    </g:link>
                </li>
             </g:each>

@@ -1,16 +1,15 @@
 package compfeat.admin
 
+class Brand {
 
-class Product {
 
     static mapWith = "mongo"
 
     String id
-    String productKey
+    String key
+    String name
     String status
-    List<Tag> tags
-    Department department
-    Brand brand
+
 
 
 
@@ -19,9 +18,6 @@ class Product {
     }
 
     def beforeInsert(){
-        status =  ApplicationConstant.STATUS_ACTIVE
+        status = ApplicationConstant.STATUS_ACTIVE
     }
-
-
-
 }
