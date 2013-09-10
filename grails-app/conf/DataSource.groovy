@@ -11,7 +11,7 @@ hibernate {
 }
 grails {
     mongo {
-        host = "127.0.0.1"
+        host = "compfeat.com"
         port = 27017
         username = ""
         password = ""

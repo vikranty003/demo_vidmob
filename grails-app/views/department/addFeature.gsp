@@ -18,7 +18,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">Add Feature to Department "${department.name}"</div>
     <div class="panel-body">
-        <g:form controller="department" action="saveMeta" role="form" class="form-horizontal">
+        <g:form controller="department" action="saveFeature" role="form" class="form-horizontal">
             <g:hiddenField name="departmentId" value="${department.id}" />
             <g:render template="/feature/form"/>
             <div class="form-group">

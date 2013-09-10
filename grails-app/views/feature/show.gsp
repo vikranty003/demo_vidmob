@@ -34,7 +34,14 @@
             </tr>
             <tr>
                 <td></td>
-                <td><g:link controller="feature" action="edit" id="${feature.id}" class="btn btn-primary">Edit</g:link></td>
+                <td>
+                    <g:link controller="feature" action="edit" id="${feature.id}" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-pencil"></span> Edit
+                    </g:link>
+                    <g:link controller="feature" action="remove" id="${feature.id}" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash"></span> Remove
+                    </g:link>
+                </td>
             </tr>
             </tbody>
         </table>

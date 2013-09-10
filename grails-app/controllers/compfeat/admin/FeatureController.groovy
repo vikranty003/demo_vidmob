@@ -80,4 +80,20 @@ class FeatureController {
 
     }
 
+    def remove(String id){
+
+        if(!featureService.delete(id)){
+            flash.message = "Unable to delete Feature"
+            redirect(action: 'index')
+            return
+        }
+        flash.message = "Feature removed"
+        redirect(action: 'index')
+        return
+
+
+
+    }
+
+
 }

@@ -67,7 +67,10 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><g:link controller="meta" action="edit" id="${meta.id}" class="btn btn-primary">Edit</g:link></td>
+                    <td>
+                        <g:link controller="meta" action="edit" id="${meta.id}" class="btn btn-primary">Edit</g:link>
+                        <g:link controller="meta" action="remove" id="${meta.id}" class="btn btn-error">Delete</g:link>
+                    </td>
                 </tr>
             </tbody>
         </table>

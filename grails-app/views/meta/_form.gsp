@@ -20,7 +20,7 @@
 <div class="form-group">
     <label for="type" class="col-md-2 control-label">Unit</label>
     <div class="col-md-6">
-        <input type="text" class="form-control" id="unit" name="name" value="${meta?.unit}" placeholder="Enter Unit" required="true">
+        <input type="text" class="form-control" id="unit" name="unit" value="${meta?.unit}" placeholder="Enter Unit" required="true">
     </div>
 </div>
 <div class="form-group">

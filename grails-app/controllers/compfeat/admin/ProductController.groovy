@@ -4,24 +4,18 @@ import compfeat.admin.Product
 
 class ProductController {
 
-    private products = ['smartPhone':'Smart Phones',
-                        'tablet':'Tablets',
-                        'laptop':'Laptops']
+    def DepartmentService departmentService
 
     def index() {
 
-        [products: products]
+        def departments = departmentService.getDepartments()
+        [departments: departments]
 
     }
 
-    def list(){
-        def items = Product.withCriteria {
-
-        }
-
-        items.each { it ->
-           print it['brand']
-        }
+    def list(String departmentId){
+        def departments = departmentService.getDepartments()
+        [departments: departments]
 
         [products: products]
     }

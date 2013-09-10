@@ -180,8 +180,7 @@ class DepartmentController {
         if (null != params.featureId){
             feature = featureService.findFeatureById(params.featureId)
         }
-        [department: department, featureList: featureList, feature: feature
-        ]
+        [department: department, featureList: featureList, feature: feature]
 
 
     }

@@ -21,4 +21,16 @@ class FeatureService {
         return Feature.get(id)
     }
 
+    boolean delete(String id){
+
+        def feature = findFeatureById(id)
+        if(!feature){
+            return false
+        }
+        feature.delete(flush: true)
+        return true
+
+    }
+
+
 }
