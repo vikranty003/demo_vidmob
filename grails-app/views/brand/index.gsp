@@ -14,7 +14,7 @@
 </head>
 <body>
 <g:render template="header"/>
-<div class="container">
+<div>
     <g:render template="/common/flash" />
     <ul class="list-inline">
         <g:each in="${brands}" var="brand">

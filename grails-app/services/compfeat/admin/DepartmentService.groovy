@@ -26,4 +26,23 @@ class DepartmentService {
         def departments = Department.findAllByStatus(ApplicationConstant.STATUS_ACTIVE)
         return departments
     }
+
+    Map<String, Feature> getDepartmentFeatures(Department department){
+
+        def featureGroupMap = [:]
+        department.featureList.each { it->
+
+            List<Feature> groupFeatures = featureGroupMap.get(it.group)
+            if(groupFeatures == null){
+                groupFeatures = []
+            }
+            groupFeatures.add(it)
+            featureGroupMap.put(it.name, groupFeatures)
+
+
+        }
+        return featureGroupMap
+
+    }
+
 }

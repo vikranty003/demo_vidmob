@@ -3,6 +3,7 @@
 <head>
     <title>Compfeat Admin</title>
     <r:require modules="bootstrap"/>
+    <link type="text/css" href="${resource(dir: 'css', file: 'admin.css')}" rel="stylesheet" />
     <g:layoutHead/>
     <r:layoutResources />
 </head>
@@ -43,6 +44,19 @@
                     <g:else>
                         <li><g:link controller="feature" action="index">Feature</g:link></li>
                     </g:else>
+                    <g:if test="${params.controller == 'brand'}">
+                        <li class="active"><g:link controller="brand" action="index">Brand</g:link></li>
+                    </g:if>
+                    <g:else>
+                        <li><g:link controller="brand" action="index">Brand</g:link></li>
+                    </g:else>
+                    <g:if test="${params.controller == 'tag'}">
+                        <li class="active"><g:link controller="tag" action="index">Tag</g:link></li>
+                    </g:if>
+                    <g:else>
+                        <li><g:link controller="tag" action="index">Tag</g:link></li>
+                    </g:else>
+
                 </ul>
             </div><!--/.nav-collapse -->
         </div>

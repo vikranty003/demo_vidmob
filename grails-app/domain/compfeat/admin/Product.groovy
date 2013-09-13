@@ -10,8 +10,11 @@ class Product {
     String status
     List<Tag> tags
     Department department
+    List<Feature> features
     Brand brand
 
+
+    static embedded = ['features']
 
 
     static constraints = {

@@ -14,7 +14,7 @@
 </head>
 <body>
     <g:render template="header" />
-    <div class="row">
+    <div>
         <ul class="list-inline">
             <g:each in="${departments}" var="department">
                <li class="thumbnail">
