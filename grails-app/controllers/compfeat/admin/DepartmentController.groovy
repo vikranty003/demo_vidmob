@@ -174,13 +174,9 @@ class DepartmentController {
             redirect(controller: 'department' , action: 'index')
         }
 
-        def featureList = featureService.getFeatures();
+        def featureList = departmentService.getDepartmentFeatures()
 
-        def feature = new Feature()
-        if (null != params.featureId){
-            feature = featureService.findFeatureById(params.featureId)
-        }
-        [department: department, featureList: featureList, feature: feature]
+        [department: department, featureList: featureList]
 
 
     }

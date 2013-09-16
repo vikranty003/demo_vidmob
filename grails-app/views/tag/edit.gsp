@@ -16,7 +16,7 @@
 <body>
 <g:render template="header"/>
 <g:render template="/common/flash" />
-<div class="panel panel-default">
+<div class="panel panel-success">
     <div class="panel-heading">Edit Tag</div>
     <div class="panel-body">
         <g:form controller="tag" action="update" role="form" class="form-horizontal">

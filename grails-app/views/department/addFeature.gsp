@@ -15,7 +15,7 @@
 <body>
 <g:render template="header"/>
 <g:render template="/common/flash" />
-<div class="panel panel-default">
+<div class="panel panel-success">
     <div class="panel-heading">Add Feature to Department "${department.name}"</div>
     <div class="panel-body">
         <g:form controller="department" action="saveFeature" role="form" class="form-horizontal">

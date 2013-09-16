@@ -14,6 +14,7 @@
 </head>
 <body>
 <g:render template="header"/>
+
 <div>
     <g:render template="/common/flash" />
     <ul class="list-inline">
@@ -25,6 +26,7 @@
             </li>
         </g:each>
     </ul>
+
 </div>
 </body>
 </html>
