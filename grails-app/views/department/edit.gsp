@@ -30,5 +30,31 @@
             </g:form>
         </div>
     </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Add Features</div>
+        <div class="panel-body">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>Size</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            Length <button type="button" class="btn btn-danger btn-xs">&nbsp;<span class="glyphicon glyphicon-minus-sign"></span>&nbsp;</button>
+                        </li>
+                        <li class="list-group-item">Height</li>
+                        <li class="list-group-item"><button class="btn">Add New Feature !!</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <r:script>
+
+        var features = {'size': ['length', 'width', 'depth', 'screen size']};
+        function renderFeature(){
+            features.each()
+        }
+
+    </r:script>
 </body>
 </html>
