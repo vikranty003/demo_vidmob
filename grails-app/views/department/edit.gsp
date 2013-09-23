@@ -30,5 +30,47 @@
             </g:form>
         </div>
     </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Features</strong></div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Size</strong> <button class="btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-minus-sign"></span></button> </li>
+                        <li class="list-group-item">
+                            <ul class="list-group">
+                                <li class="list-group-item">width <button class="btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-minus-sign"></span></button></li>
+                                <li class="list-group-item">height</li>
+                                <li class="list-group-item">width</li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item active">Size</li>
+                        <li class="list-group-item">
+                            <ul class="list-group">
+                                <li class="list-group-item">width</li>
+                                <li class="list-group-item">height</li>
+                                <li class="list-group-item">width</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">Meta</div>
+                <div class="panel-body">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <g:javascript>
+        var features = { 'size':['length', 'height', 'width'], 'camera': ['front camera', 'back camera'] };
+        function renderTree(){
+
+        }
+    </g:javascript>
 </body>
 </html>
