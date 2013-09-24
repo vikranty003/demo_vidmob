@@ -40,25 +40,51 @@
                         <li class="list-group-item">
                             <ul class="list-group">
                                 <li class="list-group-item">width <button class="btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-minus-sign"></span></button></li>
-                                <li class="list-group-item">height</li>
-                                <li class="list-group-item">width</li>
+                                <li class="list-group-item">height <button class="btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-minus-sign"></span></button></li>
+                                <li class="list-group-item">width <button class="btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-minus-sign"></span></button></li>
+                                <li class="list-group-item">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                                        </span>
+                                    </div>
+                                </li>
                             </ul>
                         </li>
-                        <li class="list-group-item active">Size</li>
+                        <li class="list-group-item">Size</li>
                         <li class="list-group-item">
                             <ul class="list-group">
-                                <li class="list-group-item">width</li>
-                                <li class="list-group-item">height</li>
-                                <li class="list-group-item">width</li>
+                                <li class="list-group-item">width <button class="btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-minus-sign"></span></button></li>
+                                <li class="list-group-item">height <button class="btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-minus-sign"></span></button></li>
+                                <li class="list-group-item">width <button class="btn btn-danger btn-xs pull-right"><span class="glyphicon glyphicon-minus-sign"></span></button></li>
+                                <li class="list-group-item">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                                        </span>
+                                    </div>
+                                </li>
+
                             </ul>
                         </li>
+                        <li class="list-group-item">
+                            <div class="input-group">
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                                </span>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
 
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="panel panel-success">
+            <div class="panel">
                 <div class="panel-heading">Meta</div>
                 <div class="panel-body">
                 </div>
