@@ -30,31 +30,85 @@
             </g:form>
         </div>
     </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">Add Features</div>
-        <div class="panel-body">
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <h3>Size</h3>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            Length <button type="button" class="btn btn-danger btn-xs">&nbsp;<span class="glyphicon glyphicon-minus-sign"></span>&nbsp;</button>
-                        </li>
-                        <li class="list-group-item">Height</li>
-                        <li class="list-group-item"><button class="btn">Add New Feature !!</button></li>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Features</strong></div>
+                <div class="panel-body">
+                    <ul class="list-group" id="features-info">
                     </ul>
-                </li>
-            </ul>
+                </div>
+
+            </div>
         </div>
+        <div class="col-lg-6">
+            <div class="panel">
+                <div class="panel-heading">Meta</div>
+                <div class="panel-body">
+                </div>
+            </div>
+        </div>
+
     </div>
+    <g:javascript>
+        var features = { 'size':['length', 'height', 'width'], 'some camera': ['front camera', 'back camera'] };
+        function renderTree(){
 
-    <r:script>
+            var featureStr = "";
+            for(prop in features){
+                featureStr += "<li class='list-group-item'>";
+                featureStr += "<strong>"+prop+"</strong>";
+                featureStr += "<button class='btn btn-danger btn-xs pull-right' onclick='removeFeature(\""+prop+"\", null)' ><span class='glyphicon glyphicon-minus-sign'></span></button> </li>";
+                featureStr += "<li class='list-group-item'>";
+                featureStr += "<ul class='list-group'>";
+                for(index in features[prop]){
+                    featureStr += "<li class='list-group-item'>"+features[prop][index];
+                    featureStr += " <button class='btn btn-danger btn-xs pull-right' onclick='removeFeature(\""+prop+"\", "+index+")'><span class='glyphicon glyphicon-minus-sign'></span></button></li>";
+                }
+                featureStr += "<li class='list-group-item'><div class='input-group'>";
+                featureStr += "<input type='text' class='form-control'>";
+                featureStr += "<span class='input-group-btn'>";
+                featureStr += "<button class='btn btn-success' onClick=\"addFeature(this, '"+prop+"')\"><span class='glyphicon glyphicon-plus-sign'></span></button>";
+                featureStr += "</span></div></li>";
 
-        var features = {'size': ['length', 'width', 'depth', 'screen size']};
-        function renderFeature(){
-            features.each()
+                featureStr += "</ul></li></li>"
+            }
+            featureStr += "<li class='list-group-item'>";
+            featureStr += "<div class='input-group'>";
+            featureStr += "<input type='text' class='form-control'>";
+            featureStr += "<span class='input-group-btn'>";
+            featureStr += "<button class='btn btn-success' onClick=\"addFeature(this, null)\" ><span class='glyphicon glyphicon-plus-sign'></span></button>";
+            featureStr += "</span></div></li>";
+
+            $('#features-info').html(featureStr);
+
         }
 
-    </r:script>
+        function removeFeature(group, propIndex){
+
+            if (propIndex == null){
+                delete features[group];
+            }else{
+                delete features[group][propIndex];
+            }
+            renderTree();
+        }
+
+        function addFeature(addBtn, group){
+
+            var txt = $(addBtn).parent().prev().val();
+            if(txt != ''){
+                if(group == null){
+                    features[txt] = [];
+                }else{
+                    features[group].push(txt);
+                }
+                renderTree();
+
+            }
+        }
+
+        renderTree();
+    </g:javascript>
 </body>
 </html>
