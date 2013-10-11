@@ -66,7 +66,7 @@
                     featureStr += " <button class='btn btn-danger btn-xs pull-right' onclick='removeFeature(\""+prop+"\", "+index+")'><span class='glyphicon glyphicon-minus-sign'></span></button></li>";
                 }
                 featureStr += "<li class='list-group-item'><div class='input-group'>";
-                featureStr += "<input type='text' class='form-control'>";
+                featureStr += "<input type='text' class='form-control' placeholder='Enter Property Name in :"+prop+": '>";
                 featureStr += "<span class='input-group-btn'>";
                 featureStr += "<button class='btn btn-success' onClick=\"addFeature(this, '"+prop+"')\"><span class='glyphicon glyphicon-plus-sign'></span></button>";
                 featureStr += "</span></div></li>";
@@ -75,7 +75,7 @@
             }
             featureStr += "<li class='list-group-item'>";
             featureStr += "<div class='input-group'>";
-            featureStr += "<input type='text' class='form-control'>";
+            featureStr += "<input type='text' class='form-control' placeholder='Enter Group Name'>";
             featureStr += "<span class='input-group-btn'>";
             featureStr += "<button class='btn btn-success' onClick=\"addFeature(this, null)\" ><span class='glyphicon glyphicon-plus-sign'></span></button>";
             featureStr += "</span></div></li>";

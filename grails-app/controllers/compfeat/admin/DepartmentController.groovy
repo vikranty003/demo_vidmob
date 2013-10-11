@@ -215,9 +215,12 @@ class DepartmentController {
 
     }
 
-
-
-    def saveFeature(String departmentId){
+    /**
+     *
+     * @param departmentId
+     * @return
+     */
+    def saveFeatures(String departmentId){
         def department = departmentService.findDepartmentById(departmentId)
 
         if(!department){
@@ -225,6 +228,7 @@ class DepartmentController {
             redirect(controller: 'department' , action: 'index')
             return
         }
+
 
         def feature = new Feature(params)
         if(!department.addToFeatureList(feature).save(flush: true)){
@@ -239,6 +243,8 @@ class DepartmentController {
 
 
     }
+
+
 
     /** feature end **/
 
