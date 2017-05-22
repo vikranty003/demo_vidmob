@@ -15,7 +15,7 @@ grails {
         port = 27017
         username = ""
         password = ""
-        databaseName = "compfeat"
+        databaseName = "test"
     }
 
 }
@@ -28,7 +28,7 @@ environments {
         }
         grails {
             mongo {
-                databaseName = "compfeat-admin"
+                databaseName = "test"
             }
 
         }
